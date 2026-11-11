@@ -3,17 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>SGIAL-BAP · Prototipo</title>
+<title>BAP · Inventario</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header>
-  <h1>SGIAL-BAP<small>Gestión de inventario y alertas logísticas · Banco de Alimentos Perú · datos de prueba</small></h1>
-  <label style="flex-direction:row;align-items:center;gap:8px">Rol
-    <select id="role" style="width:auto"><option>Administrador</option><option>Operador</option></select></label>
+  <div class="marca">
+    <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+      <rect width="40" height="40" rx="10" fill="#f28c28"/>
+      <path d="M20 9 31 15v10L20 31 9 25V15z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M9 15l11 6 11-6M20 21v10" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>
+    </svg>
+    <span class="marca-nombre">BAP<small>Banco de Alimentos Perú</small></span>
+  </div>
+  <div class="sesion">
+    <span id="rolInsignia" class="insignia"></span>
+    <label>Rol
+      <select id="role"><option>Administrador</option><option>Operador</option></select>
+    </label>
+  </div>
 </header>
 <nav id="nav" role="tablist"></nav>
+<p id="rolInfo"></p>
 <main id="app"></main>
 <script src="js/app.js"></script>
 </body>
